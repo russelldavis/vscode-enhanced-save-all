@@ -1,4 +1,6 @@
 {
+
+
   "name": "vscode-enhanced-save-all",
   "displayName": "Enhanced Save All",
   "description": "Allows saving all named files, ignoring the file saving prompt for untitled (scratch) files",
@@ -13,25 +15,17 @@
   },
   "publisher": "gthau",
   "engines": {
-    "vscode": "^1.67.0"
+    "vscode": "^1.75.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:vscode-enhanced-save-all.save-all-except-untitled",
-    "onCommand:vscode-enhanced-save-all.save-all-in-group-except-untitled"
-  ],
-  "main": "./dist/extension.js",
+  "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "vscode-enhanced-save-all.save-all-except-untitled",
         "title": "Enhanced Save All: Save All except Untitled"
-      },
-      {
-        "command": "vscode-enhanced-save-all.save-all-in-group-except-untitled",
-        "title": "Enhanced Save All: Save All in Group except Untitled"
       }
     ],
     "keybindings": [
@@ -39,11 +33,6 @@
         "command": "vscode-enhanced-save-all.save-all-except-untitled",
         "key": "ctrl+k shift+s",
         "mac": "cmd+k shift+s"
-      },
-      {
-        "command": "vscode-enhanced-save-all.save-all-except-untitled",
-        "key": "ctrl+k alt+s",
-        "mac": "cmd+k meta+s"
       }
     ]
   },
@@ -61,7 +50,7 @@
     "publish": "npx vsce publish"
   },
   "devDependencies": {
-    "@types/vscode": "^1.67.0",
+    "@types/vscode": "^1.75.0",
     "@types/glob": "^7.2.0",
     "@types/mocha": "^9.1.1",
     "@types/node": "14.x",
